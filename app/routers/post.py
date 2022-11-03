@@ -13,7 +13,7 @@ router = APIRouter(
 
 #---WE ARE GOING TO CODE DIFFERENT FUNCTIONS TO CREATE POSTS (EACH ONE OF THEM PERFORM THE CRUD FUNCTIONALLITIES!)---#
 @router.get("/", response_model=List[schemas.PostOut])
-def get_posts(db: Session = Depends(get_db)):
+def get_posts(db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
     post = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(
         models.Vote, models.Vote.post_id == models.Post.id, isouter=True).group_by(models.Post.id).all()
     return post
