@@ -7,7 +7,6 @@ jobs:
     environment:
       name: testing
     env:
-      POSTGRES_HOST_AUTH_METHOD: ${{secrets.POSTGRES_HOST_AUTH_METHOD}}
       DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
       DATABASE_PORT: ${{secrets.DATABASE_PORT}}
       DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
@@ -21,6 +20,7 @@ jobs:
       postgres:
         image: postgres
         env:
+          POSTGRES_HOST_AUTH_METHOD: ${{secrets.POSTGRES_HOST_AUTH_METHOD}}
           POSTGRES_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
           POSTGRES_DB: ${{secrets.DATABASE_NAME}}_test
         ports:
