@@ -51,7 +51,7 @@ All the app had been containerized using Docker, and the data recieved saved on 
             ├── requirements.txt
             ├── .gitignore
             ├── README.md
-            └── app_workflow.docx
+            └── Workflow.pdf
 
 
 **I really recommend reading the `Workflow.pdf` to gain a deeper and clearer understanding of the project and how it works internally. I try to do so, by using Flow Diagrams and showing the experiene of the User step by step.**
