@@ -3,6 +3,7 @@
  The goal of this project was to develop a sort of "Twitter Toy" full-fledged API with the microservice **FastAPI**.
  This API imitates the main functionallities of any other Social Media. It has to hande with User registrations and Authentications, and enables it to perform different things such as uploading, deleting, liking or disliking a Post.
  
+ ![Alt ](img/mamadera.jpeg "Title")
 ## **Motivation, Technologies and Teachings**
 
 Well, the main Motivation was to learn the fundamentals of API design.
